@@ -33,7 +33,7 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:text="Добавить свою новость"
-    android:id="@+id/newsButton"
+    android:id="@+id/addNewButton"
     android:layout_gravity="bottom"
     />
 

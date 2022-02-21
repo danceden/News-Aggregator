@@ -10,15 +10,14 @@ interface MainApi {
     fun getItems(): Call<List<New>>
 
     @POST("add")
+    @Headers("Content-Type: application/json")
     fun postItems(@Body addNew: AddNew): Call<Unit>
 
     @DELETE("{newID}")
-    fun deleteItems(@Path("newID") newID : Int): Call<Unit>
+    fun deleteItems(@Path("newID") newID: Int): Call<Unit>
 
     @PUT("{newID}")
-    fun editItems(@Path("newID")newID: Int, @Body addNew: AddNew): Call<Unit>
-
-
-
+    @Headers("Content-Type: application/json")
+    fun editItems(@Path("newID") newID: Int, @Body addNew: AddNew): Call<Unit>
 }
 
